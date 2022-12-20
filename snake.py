@@ -29,7 +29,7 @@ direction = "RIGHT"
 change_to = direction
 
 # initialize food position
-food_pos = [random.randrange(1, (SCREEN_WIDTH // BLOCK_SIZE)) * BLOCK_SIZE,            random.randrange(1, (SCREEN_HEIGHT // BLOCK_SIZE)) * BLOCK_SIZE]
+food_pos = [random.randrange(1, (SCREEN_WIDTH // BLOCK_SIZE)) * BLOCK_SIZE, random.randrange(1, (SCREEN_HEIGHT // BLOCK_SIZE)) * BLOCK_SIZE]
 food_spawn = True
 
 score = 0
@@ -92,9 +92,6 @@ while True:
 
     # snake body growing mechanism
     snake_body.insert(0, list(snake_pos))
-    print(snake_body)
-    print(snake_pos)
-    print(food_pos)
     if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:
         score += 1
         food_spawn = False
